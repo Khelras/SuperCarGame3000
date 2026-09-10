@@ -28,8 +28,8 @@ public class CarControl : MonoBehaviour
     public float m_SteeringRange = 30.0f;
     public float m_SteeringRangeAtMaxSpeed = 10.0f;
 
-    public float m_SteerAcceleration = 8.0f;
-    public float m_SteerReturnAcceleration = 4.0f;
+    public float m_SteerAcceleration = 4.0f;
+    public float m_SteerReturnAcceleration = 2.0f;
     private float m_CurrentTurn = 0.0f;
     
     [Header("ReverseLights")]
@@ -154,22 +154,31 @@ public class CarControl : MonoBehaviour
         float vInput = m_InputActions.FindAction("Throttle").ReadValue<float>(); // Forward/backward input
         float hInput = m_InputActions.FindAction("Steer").ReadValue<float>(); // Steering input
 
-        // Slowly turn our steering
-        if (Mathf.Abs(hInput) > 0.1f)
-        {
-            m_CurrentTurn += hInput * m_SteerAcceleration * Time.fixedDeltaTime;
-        }
-        else
-        {
-            int sign = Mathf.RoundToInt(Mathf.Sign(m_CurrentTurn));
-            m_CurrentTurn -= Mathf.Sign(m_CurrentTurn) * m_SteerReturnAcceleration * Time.fixedDeltaTime;
+        //// Slowly turn our steering
+        //if (Mathf.Abs(hInput) > 0.1f)
+        //{
+        //    m_CurrentTurn += hInput * m_SteerAcceleration * Time.fixedDeltaTime;
+        //}
+        //else
+        //{
+        //    int sign = Mathf.RoundToInt(Mathf.Sign(m_CurrentTurn));
+        //    m_CurrentTurn -= Mathf.Sign(m_CurrentTurn) * m_SteerReturnAcceleration * Time.fixedDeltaTime;
 
-            // Checks for overshooting returning to zero
-            if (sign != Mathf.RoundToInt(Mathf.Sign(m_CurrentTurn)))
-            {
-                m_CurrentTurn = 0.0f;
-            }
-        }
+        //    if (sign != Mathf.RoundToInt(Mathf.Sign(m_CurrentTurn)))
+        //    {
+        //        m_CurrentTurn = 0.0f;
+        //    }
+        //}
+        //m_CurrentTurn = Mathf.Clamp(m_CurrentTurn, -1.0f, 1.0f);
+
+        // New Turning Logic for Mobile Inputs:
+        // Smoothly move toward the target steering input (magnitude-aware)
+        float targetTurn = hInput;
+        float acceleration = Mathf.Abs(targetTurn) > Mathf.Abs(m_CurrentTurn)
+            ? m_SteerAcceleration
+            : m_SteerReturnAcceleration;
+
+        m_CurrentTurn = Mathf.MoveTowards(m_CurrentTurn, targetTurn, acceleration * Time.fixedDeltaTime);
         m_CurrentTurn = Mathf.Clamp(m_CurrentTurn, -1.0f, 1.0f);
 
         // Calculate current speed along the car's forward axis

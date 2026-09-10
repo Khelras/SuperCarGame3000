@@ -470,8 +470,8 @@ MonoBehaviour:
   m_MaxSpeed: 50
   m_SteeringRange: 30
   m_SteeringRangeAtMaxSpeed: 10
-  m_SteerAcceleration: 8
-  m_SteerReturnAcceleration: 4
+  m_SteerAcceleration: 4
+  m_SteerReturnAcceleration: 2
   m_ReverseLightEmissiveStrengths: {x: 1, y: 30}
   m_ReverseLightStrengths: {x: 0, y: 1}
   m_ReverseLightLerp: 24
