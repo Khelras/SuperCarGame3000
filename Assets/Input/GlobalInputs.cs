@@ -217,6 +217,17 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""bfe4b8e2-7586-4fa5-816f-dcc7a31eb1d6"",
+                    ""path"": ""<AndroidJoystick>/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""74ff749b-b124-4b6d-a602-a4ab32de07bd"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
@@ -230,6 +241,17 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""5d3a5499-64c0-4072-892f-f85d496e5cd7"",
                     ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aa8d2b29-6305-4202-a479-e77f49f6e7d6"",
+                    ""path"": ""<AndroidJoystick>/stick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -261,6 +283,17 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""3573db98-b5ad-466c-bf9f-64fe49c8ef27"",
+                    ""path"": ""<AndroidJoystick>/stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Forward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""08c43039-d56d-48b8-93ca-481e8663e479"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
@@ -274,6 +307,17 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""72b9f480-698b-4b2e-966e-7b3c59f48bf2"",
                     ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Backward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""735b578f-d795-42ef-a10b-7f2bd78de396"",
+                    ""path"": ""<AndroidJoystick>/stick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
