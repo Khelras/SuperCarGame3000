@@ -478,7 +478,7 @@ MonoBehaviour:
   m_CrashPitchRange: {x: 1.5, y: 2}
   m_CrashVolumeRange: {x: 0.7, y: 0.9}
   m_InputActions: {fileID: -944628639613478452, guid: ee07d9f47939a13458a2f97783c5a0a2, type: 3}
-  m_MouseLocked: 1
+  m_MouseLocked: 0
 --- !u!1 &1176304899387297086
 GameObject:
   m_ObjectHideFlags: 0

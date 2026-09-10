@@ -38,8 +38,8 @@ public class PauseMenu : MonoBehaviour
         AudioListener.pause = true;
 
         // Unlock the Cursor
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.None;
 
         // Set the Level Text
         levelText.text = $"Level {levelNumber}";
@@ -55,8 +55,8 @@ public class PauseMenu : MonoBehaviour
         AudioListener.pause = false;
 
         // Lock the Cursor
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
 
         if (pauseMenuCanvas != null) pauseMenuCanvas.SetActive(false);
     }

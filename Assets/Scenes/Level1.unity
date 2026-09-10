@@ -13406,6 +13406,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 207696068020146475, guid: 4e97d7355699f914ba2575475f38fc31, type: 3}
+      propertyPath: m_RaceManager
+      value: 
+      objectReference: {fileID: 1676105032}
     - target: {fileID: 234197623802619950, guid: 4e97d7355699f914ba2575475f38fc31, type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 5.7024643e+34

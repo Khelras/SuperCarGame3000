@@ -53,7 +53,7 @@ public class CarControl : MonoBehaviour
         set { m_IsControllable = value; }
     }
 
-    public bool m_MouseLocked = true;
+    public bool m_MouseLocked = false;
 
     /// <summary>
     /// Gizmo callback so that we can render appropriate scene gizmos
