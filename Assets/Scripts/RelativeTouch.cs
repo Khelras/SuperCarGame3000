@@ -22,7 +22,7 @@ public class RelativeTouch : OnScreenControl, IPointerDownHandler, IDragHandler,
     [SerializeField] private RectTransform touchBounds; // Valid area for the INITIAL touch only
 
     [Header("Sensitivity")]
-    [SerializeField] private float maxDragDistance = 400; // Pixels of drag for full -1..1 output
+    [SerializeField] private float maxDragDistance = 400; // Pixels of drag for full -1 to 1 output
 
     [Header("Visual Line")]
     [SerializeField] private RectTransform overlayContainer; // Full-stretch container the line lives in
@@ -47,7 +47,7 @@ public class RelativeTouch : OnScreenControl, IPointerDownHandler, IDragHandler,
     public void OnPointerDown(PointerEventData eventData)
     {
         if (isDragging) return; // Already tracking a touch, ignore additional presses
-        Debug.Log($"Pointer Down: {eventData.position} in bounds {touchBounds.rect}");
+
         if (!RectTransformUtility.RectangleContainsScreenPoint(touchBounds, eventData.position, eventData.pressEventCamera))
             return; // Initial touch was outside bounds — ignore entirely
 
