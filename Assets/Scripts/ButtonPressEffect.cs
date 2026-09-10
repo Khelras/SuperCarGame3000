@@ -38,7 +38,7 @@ public class ButtonPressEffect : MonoBehaviour, IPointerDownHandler, IPointerUpH
         // Base Color
         if (targetImage != null) baseColor = targetImage.color;
 
-        // Scale for Press Effecst
+        // Scale for Press Effect
         fullScale = parentRect.localScale.x;
         pressScale = parentRect.localScale.x - pressDecrement;
 
