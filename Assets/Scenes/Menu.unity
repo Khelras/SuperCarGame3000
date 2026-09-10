@@ -5399,13 +5399,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelCardHoverPress
   backgroundImage: {fileID: 1200208812}
-  hoverScale: 1.05
+  pressScale: 0.95
   normalColor: {r: 1, g: 1, b: 1, a: 1}
-  hoverColor: {r: 1, g: 0.5490196, b: 0, a: 1}
+  pressedColor: {r: 1, g: 0.5490196, b: 0, a: 1}
   audioSource: {fileID: 733784623}
-  hoverSound: {fileID: 8300000, guid: 3a6f381669fefa246a15726a33c6b808, type: 3}
   pressSound: {fileID: 8300000, guid: d2b67b4c4c86571419c9375b1d778ca6, type: 3}
-  transitionDuration: 0.12
+  transitionDuration: 0.067
   transitionCurve:
     serializedVersion: 2
     m_Curve:
@@ -13742,13 +13741,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelCardHoverPress
   backgroundImage: {fileID: 1331297137}
-  hoverScale: 1.05
+  pressScale: 0.95
   normalColor: {r: 1, g: 1, b: 1, a: 1}
-  hoverColor: {r: 1, g: 0.5490196, b: 0, a: 1}
+  pressedColor: {r: 1, g: 0.5490196, b: 0, a: 1}
   audioSource: {fileID: 733784623}
-  hoverSound: {fileID: 8300000, guid: 3a6f381669fefa246a15726a33c6b808, type: 3}
   pressSound: {fileID: 8300000, guid: d2b67b4c4c86571419c9375b1d778ca6, type: 3}
-  transitionDuration: 0.12
+  transitionDuration: 0.067
   transitionCurve:
     serializedVersion: 2
     m_Curve:
@@ -14377,13 +14375,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelCardHoverPress
   backgroundImage: {fileID: 1133524252}
-  hoverScale: 1.05
+  pressScale: 0.95
   normalColor: {r: 1, g: 1, b: 1, a: 1}
-  hoverColor: {r: 1, g: 0.5490196, b: 0, a: 1}
+  pressedColor: {r: 1, g: 0.5490196, b: 0, a: 1}
   audioSource: {fileID: 733784623}
-  hoverSound: {fileID: 8300000, guid: 3a6f381669fefa246a15726a33c6b808, type: 3}
   pressSound: {fileID: 8300000, guid: d2b67b4c4c86571419c9375b1d778ca6, type: 3}
-  transitionDuration: 0.12
+  transitionDuration: 0.067
   transitionCurve:
     serializedVersion: 2
     m_Curve:
