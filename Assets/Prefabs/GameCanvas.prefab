@@ -1733,6 +1733,7 @@ GameObject:
   - component: {fileID: 1055995450627433986}
   - component: {fileID: 5005472425307846951}
   - component: {fileID: 5061416452493772196}
+  - component: {fileID: 3914997124774035272}
   m_Layer: 5
   m_Name: GameCanvas
   m_TagString: Untagged
@@ -1867,6 +1868,21 @@ MonoBehaviour:
   levelNumber: 0
   levelText: {fileID: 7804227673001376191}
   m_InputActions: {fileID: -944628639613478452, guid: ee07d9f47939a13458a2f97783c5a0a2, type: 3}
+--- !u!114 &3914997124774035272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2791426907587484281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b374e351a8f618b43bf0855e071558b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputModeApplier
+  analogStickObject: {fileID: 3586425252850674289}
+  relativeTouchObject: {fileID: 6088437153957568147}
+  rotationalObject: {fileID: 7483141814701439456}
 --- !u!1 &2946034628477777061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,7 +2112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &162398075469423071
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4508,7 +4524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1777694711449972525
 RectTransform:
   m_ObjectHideFlags: 0
