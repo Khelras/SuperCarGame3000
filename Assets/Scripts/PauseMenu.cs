@@ -61,6 +61,12 @@ public class PauseMenu : MonoBehaviour
         if (pauseMenuCanvas != null) pauseMenuCanvas.SetActive(false);
     }
 
+    public void RestartLevel()
+    {
+        // Reloads the currently active scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void QuitLevel()
     {
         // Unpause
