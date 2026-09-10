@@ -73,7 +73,7 @@ Material:
     m_Floats:
     - _Blend: 1
     - _Brightness: 1
-    - _EmissiveStrength: 1.0000001
+    - _EmissiveStrength: 1
     - _HueShift: 0
     - _OverrideRoughness: 1
     - _QueueControl: 0
