@@ -147,33 +147,6 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Look"",
-                    ""type"": ""Value"",
-                    ""id"": ""831a2400-9000-4104-8335-524c1e26178e"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Move"",
-                    ""type"": ""Value"",
-                    ""id"": ""6d6054eb-de7c-4c31-a7b1-95fdad3a7787"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Drive"",
-                    ""type"": ""Value"",
-                    ""id"": ""13d45c00-f4c4-4e15-976c-e6bfadf6f57e"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
                     ""name"": ""KillCar"",
                     ""type"": ""Button"",
                     ""id"": ""dfd7c848-c10c-48dd-85e9-2898873f534e"",
@@ -190,6 +163,24 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Steer"",
+                    ""type"": ""Value"",
+                    ""id"": ""06d039ff-d4e2-451b-bb24-062f7ca54341"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Throttle"",
+                    ""type"": ""Value"",
+                    ""id"": ""b1c540ee-8999-4c64-8f88-3ee6d4690914"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -208,17 +199,6 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""f7c84a30-2c68-4aed-9879-dcb1cf30ca12"",
                     ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Left"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bfe4b8e2-7586-4fa5-816f-dcc7a31eb1d6"",
-                    ""path"": ""<AndroidJoystick>/stick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -250,17 +230,6 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""aa8d2b29-6305-4202-a479-e77f49f6e7d6"",
-                    ""path"": ""<AndroidJoystick>/stick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Right"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""645b3353-71aa-4696-8074-cf4a2b4e0254"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
@@ -274,17 +243,6 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""233bbdfc-d184-4047-873b-efa52ed27a6c"",
                     ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Forward"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3573db98-b5ad-466c-bf9f-64fe49c8ef27"",
-                    ""path"": ""<AndroidJoystick>/stick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -316,39 +274,6 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""735b578f-d795-42ef-a10b-7f2bd78de396"",
-                    ""path"": ""<AndroidJoystick>/stick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Backward"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5a6003bd-9337-4159-8040-c0b386d11341"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5aaf9ea6-f368-4af4-94a0-6da3d0afebad"",
-                    ""path"": ""<VirtualMouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""d74b1a2a-9f52-4f7f-bf84-5cf0d921e364"",
                     ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
@@ -359,130 +284,9 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""61edc4ad-7d8f-4cf8-ac60-7d63336a6721"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""50e01d61-a3ac-498f-ba2f-f8e81288fc8c"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""0f2e6b8e-baee-417a-aba8-34f8d3c05b08"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""81c244ba-bb81-46a2-baf7-4df6ae7209b6"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""c9e85a4f-313f-42e1-8a76-e065816a0b21"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""04fcce7e-d511-4fd2-9eb1-792f725edd13"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Drive"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""df9052a0-9830-4319-af0b-400868e8419f"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Drive"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""30e1f02f-079f-4819-a18f-483a3f140f3c"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Drive"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""5caf4591-4d44-4d79-be94-e832940d12a6"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Drive"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""be5ce933-5be3-40d1-bae6-59c5fdf57551"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Drive"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""23083963-e2d1-40ca-8819-efa31084e807"",
                     ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d6efe302-c731-4819-b513-513ce686482d"",
-                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -511,6 +315,149 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
                     ""action"": ""ReloadLevel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WSKeys"",
+                    ""id"": ""bd834150-4c3e-4c62-b88b-b371a1ceb359"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""5f96f34e-6745-403e-a42c-ffebfdced812"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""5ceb55dd-16ae-4c04-9656-ecffa414ff5c"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""ArrowKeys"",
+                    ""id"": ""b6d2267c-3e85-491e-85be-10cc3596fd73"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""743072bb-f58e-4e11-91f8-106d9edd6c95"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""c807aaf2-0230-4461-a370-4ac1ad300847"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""ADKeys"",
+                    ""id"": ""ea2485e6-b6bb-46ac-969b-a26a2d5b03c4"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""2232d7b0-63b6-4b5f-ba78-84f84ac77817"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""54fefe99-3eec-4bf4-b9f1-30919f093ad1"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""ArrowKeys"",
+                    ""id"": ""18dbb6f5-92dc-486c-be6c-133f8a201fce"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""5968ccbd-c41b-489c-a63a-c62d3903cbaa"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""5a3540dc-d8d1-4643-958d-7103a7add79a"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27a2cc68-9e9b-43bd-8f78-4497ce33d769"",
+                    ""path"": ""<AndroidJoystick>/stick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -525,11 +472,10 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
         m_Car_Backward = m_Car.FindAction("Backward", throwIfNotFound: true);
         m_Car_ToggleMouse = m_Car.FindAction("ToggleMouse", throwIfNotFound: true);
         m_Car_Pause = m_Car.FindAction("Pause", throwIfNotFound: true);
-        m_Car_Look = m_Car.FindAction("Look", throwIfNotFound: true);
-        m_Car_Move = m_Car.FindAction("Move", throwIfNotFound: true);
-        m_Car_Drive = m_Car.FindAction("Drive", throwIfNotFound: true);
         m_Car_KillCar = m_Car.FindAction("KillCar", throwIfNotFound: true);
         m_Car_ReloadLevel = m_Car.FindAction("ReloadLevel", throwIfNotFound: true);
+        m_Car_Steer = m_Car.FindAction("Steer", throwIfNotFound: true);
+        m_Car_Throttle = m_Car.FindAction("Throttle", throwIfNotFound: true);
     }
 
     ~@GlobalInputs()
@@ -616,11 +562,10 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Car_Backward;
     private readonly InputAction m_Car_ToggleMouse;
     private readonly InputAction m_Car_Pause;
-    private readonly InputAction m_Car_Look;
-    private readonly InputAction m_Car_Move;
-    private readonly InputAction m_Car_Drive;
     private readonly InputAction m_Car_KillCar;
     private readonly InputAction m_Car_ReloadLevel;
+    private readonly InputAction m_Car_Steer;
+    private readonly InputAction m_Car_Throttle;
     /// <summary>
     /// Provides access to input actions defined in input action map "Car".
     /// </summary>
@@ -657,18 +602,6 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Pause => m_Wrapper.m_Car_Pause;
         /// <summary>
-        /// Provides access to the underlying input action "Car/Look".
-        /// </summary>
-        public InputAction @Look => m_Wrapper.m_Car_Look;
-        /// <summary>
-        /// Provides access to the underlying input action "Car/Move".
-        /// </summary>
-        public InputAction @Move => m_Wrapper.m_Car_Move;
-        /// <summary>
-        /// Provides access to the underlying input action "Car/Drive".
-        /// </summary>
-        public InputAction @Drive => m_Wrapper.m_Car_Drive;
-        /// <summary>
         /// Provides access to the underlying input action "Car/KillCar".
         /// </summary>
         public InputAction @KillCar => m_Wrapper.m_Car_KillCar;
@@ -676,6 +609,14 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Car/ReloadLevel".
         /// </summary>
         public InputAction @ReloadLevel => m_Wrapper.m_Car_ReloadLevel;
+        /// <summary>
+        /// Provides access to the underlying input action "Car/Steer".
+        /// </summary>
+        public InputAction @Steer => m_Wrapper.m_Car_Steer;
+        /// <summary>
+        /// Provides access to the underlying input action "Car/Throttle".
+        /// </summary>
+        public InputAction @Throttle => m_Wrapper.m_Car_Throttle;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -720,21 +661,18 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
-            @Look.started += instance.OnLook;
-            @Look.performed += instance.OnLook;
-            @Look.canceled += instance.OnLook;
-            @Move.started += instance.OnMove;
-            @Move.performed += instance.OnMove;
-            @Move.canceled += instance.OnMove;
-            @Drive.started += instance.OnDrive;
-            @Drive.performed += instance.OnDrive;
-            @Drive.canceled += instance.OnDrive;
             @KillCar.started += instance.OnKillCar;
             @KillCar.performed += instance.OnKillCar;
             @KillCar.canceled += instance.OnKillCar;
             @ReloadLevel.started += instance.OnReloadLevel;
             @ReloadLevel.performed += instance.OnReloadLevel;
             @ReloadLevel.canceled += instance.OnReloadLevel;
+            @Steer.started += instance.OnSteer;
+            @Steer.performed += instance.OnSteer;
+            @Steer.canceled += instance.OnSteer;
+            @Throttle.started += instance.OnThrottle;
+            @Throttle.performed += instance.OnThrottle;
+            @Throttle.canceled += instance.OnThrottle;
         }
 
         /// <summary>
@@ -764,21 +702,18 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
-            @Look.started -= instance.OnLook;
-            @Look.performed -= instance.OnLook;
-            @Look.canceled -= instance.OnLook;
-            @Move.started -= instance.OnMove;
-            @Move.performed -= instance.OnMove;
-            @Move.canceled -= instance.OnMove;
-            @Drive.started -= instance.OnDrive;
-            @Drive.performed -= instance.OnDrive;
-            @Drive.canceled -= instance.OnDrive;
             @KillCar.started -= instance.OnKillCar;
             @KillCar.performed -= instance.OnKillCar;
             @KillCar.canceled -= instance.OnKillCar;
             @ReloadLevel.started -= instance.OnReloadLevel;
             @ReloadLevel.performed -= instance.OnReloadLevel;
             @ReloadLevel.canceled -= instance.OnReloadLevel;
+            @Steer.started -= instance.OnSteer;
+            @Steer.performed -= instance.OnSteer;
+            @Steer.canceled -= instance.OnSteer;
+            @Throttle.started -= instance.OnThrottle;
+            @Throttle.performed -= instance.OnThrottle;
+            @Throttle.canceled -= instance.OnThrottle;
         }
 
         /// <summary>
@@ -862,27 +797,6 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPause(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Look" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnLook(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnMove(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Drive" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnDrive(InputAction.CallbackContext context);
-        /// <summary>
         /// Method invoked when associated input action "KillCar" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
@@ -896,5 +810,19 @@ public partial class @GlobalInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnReloadLevel(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Steer" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSteer(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Throttle" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnThrottle(InputAction.CallbackContext context);
     }
 }

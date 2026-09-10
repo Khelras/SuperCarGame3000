@@ -151,8 +151,8 @@ public class CarControl : MonoBehaviour
         }
 
         // Get player input for acceleration and steering
-        float vInput = m_InputActions.FindAction("Drive").ReadValue<Vector2>().y; // Forward/backward input
-        float hInput = m_InputActions.FindAction("Drive").ReadValue<Vector2>().x; // Steering input
+        float vInput = m_InputActions.FindAction("Throttle").ReadValue<float>(); // Forward/backward input
+        float hInput = m_InputActions.FindAction("Steer").ReadValue<float>(); // Steering input
 
         // Slowly turn our steering
         if (Mathf.Abs(hInput) > 0.1f)
