@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuCanvas;
     [SerializeField] private uint levelNumber = 0;
     [SerializeField] private TextMeshProUGUI levelText;
+    [SerializeField] private GameObject invertRotationButton;
     [SerializeField] private GameObject calibrateRotationButton;
     
     [Header("Input Actions")]
@@ -33,10 +34,12 @@ public class PauseMenu : MonoBehaviour
         // Calibrate Rotation button is only relevant for Rotational Input mode
         if (InputModeManager.CurrentMode == SteeringInputMode.Rotational)
         {
+            if (invertRotationButton != null) invertRotationButton.SetActive(true);
             if (calibrateRotationButton != null) calibrateRotationButton.SetActive(true);
         }
         else
         {
+            if (invertRotationButton != null) invertRotationButton.SetActive(false);
             if (calibrateRotationButton != null) calibrateRotationButton.SetActive(false);
         }
     }

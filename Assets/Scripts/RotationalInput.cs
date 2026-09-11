@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Layouts;
 using UnityEngine.InputSystem.OnScreen;
 
@@ -20,7 +21,13 @@ public class RotationalInput : OnScreenControl
     [Header("Sensitivity")]
     [SerializeField] private float maxTiltAngle = 30f; // Degrees of roll for full -1 to 1 steering output
     [SerializeField] private bool invert = false;
+    public bool Invert
+    {
+        get => invert;
+        set => invert = value;
+    }
 
+    private AttitudeSensor sensor;
     private Quaternion zeroAttitude = Quaternion.identity;
     private bool gyroSupported;
 
@@ -28,11 +35,12 @@ public class RotationalInput : OnScreenControl
     {
         base.OnEnable(); // Required: registers this control with the Input System
 
-        gyroSupported = SystemInfo.supportsGyroscope;
+        sensor = AttitudeSensor.current;
+        gyroSupported = sensor != null;
 
         if (gyroSupported)
         {
-            Input.gyro.enabled = true;
+            InputSystem.EnableDevice(sensor);
             ResetRotation();
         }
         else
@@ -43,8 +51,8 @@ public class RotationalInput : OnScreenControl
 
     protected override void OnDisable()
     {
-        if (gyroSupported)
-            Input.gyro.enabled = false;
+        if (gyroSupported && sensor != null)
+            InputSystem.DisableDevice(sensor);
 
         base.OnDisable(); // Required: unregisters this control from the Input System
     }
@@ -70,16 +78,16 @@ public class RotationalInput : OnScreenControl
     public void ResetRotation()
     {
         if (!gyroSupported) return;
-        zeroAttitude = ConvertGyroAttitude(Input.gyro.attitude);
+        zeroAttitude = ConvertGyroAttitude(sensor.attitude.ReadValue());
     }
 
     private float GetRelativeRoll()
     {
-        Quaternion current = ConvertGyroAttitude(Input.gyro.attitude);
+        Quaternion current = ConvertGyroAttitude(sensor.attitude.ReadValue());
         Quaternion relative = Quaternion.Inverse(zeroAttitude) * current;
 
         float roll = relative.eulerAngles.z;
-        if (roll > 180f) roll -= 360f; // Normalize to -180..180
+        if (roll > 180f) roll -= 360f; // Normalize to -180 to 180
 
         return roll;
     }

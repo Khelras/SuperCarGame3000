@@ -68,6 +68,15 @@ public class ButtonPressEffect : MonoBehaviour, IPointerDownHandler, IPointerUpH
         parentRect.localScale = Vector3.one * fullScale;
     }
 
+    public void SetBaseColor(Color newColor)
+    {
+        baseColor = newColor;
+
+        // Apply immediately if the button isn't mid-press animation
+        if (!isPressed && targetImage != null)
+            targetImage.color = baseColor;
+    }
+
     // ================================================== Press / Release ================================================== //
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -83,15 +92,20 @@ public class ButtonPressEffect : MonoBehaviour, IPointerDownHandler, IPointerUpH
         if (!isPressed) return;
         isPressed = false;
 
-        // Only rebound to full scale
-        // If pointer already left, hover slide-out handles the rest
-        RestartPress(parentRect.localScale.x, fullScale, pressedBackgroundColor, baseColor);
+        bool releasedInsideButton = eventData.pointerCurrentRaycast.gameObject != null &&
+            eventData.pointerCurrentRaycast.gameObject.transform.IsChildOf(transform);
 
-        // Only fire if the Cursor is still over this Button when Released
-        if (eventData.pointerCurrentRaycast.gameObject != null && eventData.pointerCurrentRaycast.gameObject.transform.IsChildOf(transform))
+        // Fire the release action FIRST, so any color changes it triggers
+        // are already applied before we animate back to the resting state
+        if (releasedInsideButton)
         {
             onReleaseActivate?.Invoke();
         }
+
+        // If the release action disabled this button (e.g. UI navigation, closing a menu),
+        // don't try to animate a component/GameObject that's no longer active.
+        if (!isActiveAndEnabled) return;
+        RestartPress(parentRect.localScale.x, fullScale, pressedBackgroundColor, baseColor);
     }
 
     public void OnPointerExit(PointerEventData eventData)
